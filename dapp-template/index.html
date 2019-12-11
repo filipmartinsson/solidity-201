@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>People</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">People Dapp</h1>
+        <p class="lead">Expose your data to the world! </p>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <h2>Add Your Data</h2>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="name_input" placeholder="Name" >
+        </div>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" id="age_input" placeholder="Age">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="height_input" placeholder="Height" >
+        </div>
+        <button type="button" id="add_data_button" class="btn btn-primary">Add Data</button>
+      </div>
+      <div>
+        <h2>Get Your Data</h2>
+        <div>
+          Name: <span id="name_output"></span>
+        </div>
+        <div>
+          Age: <span id="age_output"></span>
+        </div>
+        <div>
+          Height: <span id="height_output"></span>
+        </div>
+        <button type="button" id="get_data_button" class="btn btn-primary">Get Data</button>
+      </div>
+    </div>
+
+
+  </body>
+</html>
