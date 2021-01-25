@@ -18,7 +18,7 @@ contract Bank is Ownable {
     function withdraw(uint amount) public onlyOwner returns (uint){
         require(balance[msg.sender] >= amount);
         balance[msg.sender] -= amount;
-        msg.sender.transfer(amount);
+        payable(msg.sender).transfer(amount);
         return balance[msg.sender];
     }
     
