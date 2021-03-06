@@ -9,14 +9,15 @@ contract simpleList {
 
   EntityStruct[] public entityStructs;
 
-  function newEntity(address entityAddress, uint entityData) public returns(uint rowNumber) {
+  function newEntity(address entityAddress, uint entityData) public returns(EntityStruct memory) {
     EntityStruct memory newEntity;
     newEntity.entityAddress = entityAddress;
     newEntity.entityData    = entityData;
-    return entityStructs.push(newEntity)-1;
+    entityStructs.push(newEntity);
+    return entityStructs[entityStructs.length - 1];
   }
 
-  function getEntityCount() public constant returns(uint entityCount) {
+  function getEntityCount() public view returns(uint entityCount) {
     return entityStructs.length;
   }
 }
